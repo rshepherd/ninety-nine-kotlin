@@ -6,11 +6,6 @@ import org.junit.jupiter.api.Assertions.*
 
    private val ninetyNine = NinetyNineProblems()
 
-   @Test fun sum() {
-     val expected = 42
-     assertEquals(expected, ninetyNine.sum(40, 2))
-   }
-
    @Test fun `find last element of list`() {
      val l = listOf(1, 2, 3, 4, 5, 6, 7, 8)
      assertEquals(ninetyNine.last(l), 8)

@@ -5,13 +5,6 @@ import arrow.core.*
 // https://github.com/dkandalov/kotlin-99
 class NinetyNineProblems() {
 
-    fun sum(a: Int, b: Int): Int = a + b
-
-    fun <T> toOption(t: T): String {
-        val s = Some(t)
-        return s.map { it.toString() }.getOrElse { "" }
-    }
-
     // P01 (*) Find the last element of a list.
     fun <T> last(l: List<T>): T = l[l.lastIndex]
 
