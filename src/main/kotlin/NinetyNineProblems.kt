@@ -1,9 +1,7 @@
 package org.example
 
-import arrow.core.*
-
 // https://github.com/dkandalov/kotlin-99
-class NinetyNineProblems() {
+class NinetyNineProblems {
 
     // P01 (*) Find the last element of a list.
     fun <T> last(l: List<T>): T = l[l.lastIndex]
@@ -108,6 +106,17 @@ class NinetyNineProblems() {
             slice(rotation, l.size, l) + slice(0, rotation, l)
         } else l
 
+    // P20 (*) Remove the Kth element from a list.
+    fun <T> removeAt(k: Int, l: List<T>) = Pair(slice(0, k, l) + slice(k + 1, l.size, l), l.elementAt(k))
+
+    // P21 (*) Insert an element at a given position into a list.
+    fun <T> insertAt(t: T, k: Int, l: List<T>): List<T> {
+        val (a, b) = split(k, l)
+        return a + listOf(t) + b
+    }
+
+    // P22 (*) Create a list containing all integers within a given range.
+    fun range(s: Int, e: Int): List<Int> = (s .. e).toList()
 
 
 }
